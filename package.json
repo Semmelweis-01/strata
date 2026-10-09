@@ -1,0 +1,39 @@
+{
+  "name": "strata",
+  "version": "0.1.0",
+  "description": "Read a file's git history as a geological core sample. Zero dependencies.",
+  "type": "module",
+  "bin": {
+    "strata": "./bin/strata.mjs"
+  },
+  "files": [
+    "bin/",
+    "src/"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.mjs",
+    "test:sandbox": "node --experimental-test-isolation=none --test test/*.test.mjs"
+  },
+  "keywords": [
+    "cli",
+    "git",
+    "terminal",
+    "ascii-art",
+    "ansi",
+    "truecolor",
+    "visualization",
+    "geology"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Semmelweis-01/strata.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Semmelweis-01/strata/issues"
+  },
+  "homepage": "https://github.com/Semmelweis-01/strata#readme"
+}
