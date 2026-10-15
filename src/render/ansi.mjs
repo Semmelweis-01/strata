@@ -265,9 +265,11 @@ function build(core, opts) {
     const fossilRow = layer.fossil ? Math.floor(prng() * n) : -1;
     const fossilGlyph = o.ascii ? ASCII_FOSSIL : FOSSIL_POOL[Math.floor(prng() * FOSSIL_POOL.length)];
     const banded = dikes.has(strip.layerIndex);
-    if (layer.fault) offset = DK;
+    const before = offset;
+    if (layer.fault) offset = Math.min(cap, before + DK);
     for (let r = 0; r < n; r++) {
-      const rowOffset = offset;
+      // the break row keeps the pre-break offset; the shift starts one row later
+      const rowOffset = r === 0 ? before : offset;
       const span = o.width - rowOffset;
       const dikeCol = banded ? Math.floor(((r + 1) * span) / (n + 1)) : -1;
       const fossilCol = Math.floor(span / 2);
