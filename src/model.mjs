@@ -159,7 +159,7 @@ export function buildCore(filePath, rawCommits, opts) {
       fossil: layer.deleted > 0 && layer.deleted >= layer.added,
       fault: layer.churn > 0 && layer.churn >= faultCut,
       dike: layer.isMerge,
-      depthMa: Math.round((age / 1000) * 100) / 100,
+      depthMa: toMa(age),
     };
   });
 
