@@ -114,7 +114,7 @@ export function buildCore(filePath, rawCommits, opts) {
   const records = Array.isArray(rawCommits) ? rawCommits.filter((c) => c && typeof c === 'object') : [];
   if (records.length === 0) return emptyCore(filePath);
 
-  const normPath = filePath;
+  const normPath = normalizePath(filePath);
 
   const maxRows = normalizeMaxRows(opts);
   const churns = records.map((commit) => churnOf(commit).churn);
@@ -180,7 +180,7 @@ export function buildCore(filePath, rawCommits, opts) {
 }
 
 function pickRock(filePath, index) {
-  const h = hash32(`${filePath}#${index}`);
+  const h = hash32(`${normalizePath(filePath)}#${index}`);
   return ROCKS[h % ROCKS.length];
 }
 
@@ -190,7 +190,7 @@ function pickRock(filePath, index) {
  */
 export function emptyCore(filePath) {
   const path0 = String(filePath || '');
-  const seed = hash32(path0);
+  const seed = hash32(normalizePath(path0));
   const id = (`${seed.toString(16).toUpperCase()}` + '00000000').slice(0, 8);
   return {
     path: path0,
