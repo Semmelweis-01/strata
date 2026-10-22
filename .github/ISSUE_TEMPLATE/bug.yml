@@ -1,0 +1,27 @@
+name: Bug report
+description: Something rendered wrong, or crashed
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you expected instead
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce
+      description: The exact command, and the file you pointed it at
+      placeholder: strata src/index.mjs
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: Environment
+      description: Node version, git version, OS, terminal
+      placeholder: Node 20.11, git 2.43, macOS 14, iTerm2
+    validations:
+      required: true

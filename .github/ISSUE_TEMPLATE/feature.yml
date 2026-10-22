@@ -1,0 +1,20 @@
+name: Feature or mapping idea
+description: A new entropy source, a new glyph, a new rock
+labels: [enhancement]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What git or filesystem fact should become part of the core, and what should it become?
+    validations:
+      required: true
+  - type: checkboxes
+    id: constraints
+    attributes:
+      label: This project's constraints
+      options:
+        - label: It can be computed without new runtime dependencies
+          required: true
+        - label: It is deterministic (no clock, no randomness)
+          required: true
