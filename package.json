@@ -1,7 +1,7 @@
 {
   "name": "strata",
   "version": "0.1.0",
-  "description": "Read a file's git history as a geological core sample. Zero dependencies.",
+  "description": "Your files have stratigraphy. Read a file's git history as a geological core sample — faults, fossils, dikes and all. Zero dependencies, deterministic.",
   "type": "module",
   "bin": {
     "strata": "./bin/strata.mjs"
