@@ -5,11 +5,17 @@ from PIL import Image, ImageDraw, ImageFont
 W, H = 1280, 640
 BG=(15,17,21); FG=(223,227,234); DIM=(150,158,172); ACCENT=(214,182,122); FAULTC=(255,120,120)
 
-ROCK_RGB = {
- "sandstone":(214,182,122),"shale":(110,118,132),"limestone":(223,220,202),
- "basalt":(74,80,96),"granite":(196,166,150),"marble":(238,234,227),
- "chert":(130,136,112),"obsidian":(52,50,64),
-}
+# read the palette from the source of truth instead of duplicating it
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+PALETTE = subprocess.run(
+    ["node", "--input-type=module", "-e",
+     "import('./src/palette.mjs').then(m => console.log(JSON.stringify("
+     "Object.fromEntries(Object.entries(m.ROCKS).map(([k,v]) => [k, v.rgb])))))"],
+    cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
+if PALETTE.returncode != 0:
+    raise SystemExit("palette read failed: " + PALETTE.stderr.strip())
+ROCK_RGB = {k: tuple(v) for k, v in json.loads(PALETTE.stdout).items()}
 
 env = {**os.environ, "WT_SESSION": "probe"}
 os.chdir(r"C:\\Users\\yukino\\Documents\\deepseek-harness\\default-workspace\\demo-repo")

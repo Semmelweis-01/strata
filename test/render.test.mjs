@@ -768,3 +768,29 @@ test('labels and gutter are independent switches', () => {
   assert.equal(bare.includes('commit'), false, 'bare core has no subjects');
   assert.ok(bare.split('\n').length >= 2, 'bare core still renders rows');
 });
+
+test('every rock is visible on a dark terminal', () => {
+  // WCAG relative luminance; the dark terminal background is #0f1115.
+  const lum = (rgb) => {
+    const f = rgb.map((v) => {
+      const s = v / 255;
+      return s <= 0.03928 ? s / 12.92 : Math.pow((s + 0.055) / 1.055, 2.4);
+    });
+    return 0.2126 * f[0] + 0.7152 * f[1] + 0.0722 * f[2];
+  };
+  const contrast = (a, b) => {
+    const [hi, lo] = [lum(a), lum(b)].sort((x, y) => y - x);
+    return (hi + 0.05) / (lo + 0.05);
+  };
+  const DARK_BG = [15, 17, 21];
+
+  for (const name of ROCK_ORDER) {
+    const ratio = contrast(ROCKS[name].rgb, DARK_BG);
+    assert.ok(ratio >= 3, name + ' contrast ' + ratio.toFixed(2) + ' is below 3:1 on a dark terminal');
+  }
+
+  // the ordering must survive: obsidian darkest, marble lightest
+  const byLum = ROCK_ORDER.slice().sort((a, b) => lum(ROCKS[a].rgb) - lum(ROCKS[b].rgb));
+  assert.equal(byLum[0], 'obsidian', 'obsidian must stay the darkest rock');
+  assert.equal(byLum[byLum.length - 1], 'marble', 'marble must stay the lightest rock');
+});
