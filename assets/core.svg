@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="828" height="632" viewBox="0 0 828 632" role="img" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, &quot;DejaVu Sans Mono&quot;, monospace">
+<title>strata core 3566C1BD</title>
+<desc>23 layers of engine.js, newest at the top</desc>
+<rect x="0" y="0" width="828" height="632" fill="#0f1115"/>
+<text x="20" y="40" fill="#dfe3ea" font-size="15" font-weight="600">engine.js</text>
+<text x="20" y="60" fill="#8b94a3" font-size="12">core 3566C1BD · 23 layers</text>
+<rect x="124" y="66" width="432" height="520" fill="#191d24" stroke="#2b3038" stroke-width="1"/>
+<rect x="124" y="66" width="432" height="20" fill="rgb(238,234,227)"/>
+<rect x="124" y="66" width="432" height="20" fill="url(#grain)"/>
+<g class="fossil"><circle cx="475.00" cy="76.00" r="6.00" fill="none" stroke="#f2f4f8" stroke-width="1.6"/><circle cx="475.00" cy="76.00" r="2.00" fill="#f2f4f8"/></g>
+<g class="dike"><path d="M232.00 66.00 L240.10 66.00 L312.10 86.00 L304.00 86.00 Z" fill="#59d8a4" fill-opacity="0.6" stroke="#59d8a4" stroke-width="1"/></g>
+<rect x="124" y="86" width="432" height="20" fill="rgb(196,166,150)"/>
+<rect x="124" y="86" width="432" height="20" fill="url(#grain)"/>
+<g class="dike"><path d="M232.00 86.00 L240.10 86.00 L312.10 106.00 L304.00 106.00 Z" fill="#59d8a4" fill-opacity="0.6" stroke="#59d8a4" stroke-width="1"/></g>
+<rect x="124" y="106" width="432" height="20" fill="rgb(34,32,42)"/>
+<rect x="124" y="106" width="432" height="20" fill="url(#grain)"/>
+<rect x="124" y="126" width="432" height="20" fill="rgb(34,32,42)"/>
+<rect x="124" y="126" width="432" height="20" fill="url(#grain)"/>
+<rect x="124" y="146" width="432" height="20" fill="rgb(196,166,150)"/>
+<rect x="124" y="146" width="432" height="20" fill="url(#grain)"/>
+<rect x="124" y="166" width="432" height="20" fill="rgb(96,104,116)"/>
+<rect x="124" y="166" width="432" height="20" fill="url(#grain)"/>
+<rect x="160" y="186" width="396" height="20" fill="rgb(130,136,112)"/>
+<rect x="160" y="186" width="396" height="20" fill="url(#grain)"/>
+<g class="fossil"><circle cx="529.00" cy="196.00" r="6.00" fill="none" stroke="#f2f4f8" stroke-width="1.6"/><circle cx="529.00" cy="196.00" r="2.00" fill="#f2f4f8"/></g>
+<rect x="160" y="206" width="396" height="20" fill="rgb(64,68,82)"/>
+<rect x="160" y="206" width="396" height="20" fill="url(#grain)"/>
+<rect x="160" y="226" width="396" height="20" fill="rgb(214,182,122)"/>
+<rect x="160" y="226" width="396" height="20" fill="url(#grain)"/>
+<rect x="160" y="246" width="396" height="20" fill="rgb(238,234,227)"/>
+<rect x="160" y="246" width="396" height="20" fill="url(#grain)"/>
+<rect x="160" y="266" width="396" height="20" fill="rgb(223,220,202)"/>
+<rect x="160" y="266" width="396" height="20" fill="url(#grain)"/>
+<rect x="160" y="286" width="396" height="20" fill="rgb(34,32,42)"/>
+<rect x="160" y="286" width="396" height="20" fill="url(#grain)"/>
+<rect x="196" y="306" width="360" height="20" fill="rgb(196,166,150)"/>
+<rect x="196" y="306" width="360" height="20" fill="url(#grain)"/>
+<rect x="196" y="326" width="360" height="20" fill="rgb(196,166,150)"/>
+<rect x="196" y="326" width="360" height="20" fill="url(#grain)"/>
+<rect x="196" y="346" width="360" height="20" fill="rgb(34,32,42)"/>
+<rect x="196" y="346" width="360" height="20" fill="url(#grain)"/>
+<rect x="196" y="366" width="360" height="20" fill="rgb(130,136,112)"/>
+<rect x="196" y="366" width="360" height="20" fill="url(#grain)"/>
+<rect x="196" y="386" width="360" height="20" fill="rgb(96,104,116)"/>
+<rect x="196" y="386" width="360" height="20" fill="url(#grain)"/>
+<g class="fossil"><circle cx="439.00" cy="396.00" r="6.00" fill="none" stroke="#f2f4f8" stroke-width="1.6"/><circle cx="439.00" cy="396.00" r="2.00" fill="#f2f4f8"/></g>
+<rect x="196" y="406" width="360" height="20" fill="rgb(214,182,122)"/>
+<rect x="196" y="406" width="360" height="20" fill="url(#grain)"/>
+<rect x="232" y="426" width="324" height="20" fill="rgb(214,182,122)"/>
+<rect x="232" y="426" width="324" height="20" fill="url(#grain)"/>
+<rect x="232" y="446" width="324" height="20" fill="rgb(64,68,82)"/>
+<rect x="232" y="446" width="324" height="20" fill="url(#grain)"/>
+<rect x="232" y="466" width="324" height="20" fill="rgb(223,220,202)"/>
+<rect x="232" y="466" width="324" height="20" fill="url(#grain)"/>
+<rect x="232" y="486" width="324" height="20" fill="rgb(238,234,227)"/>
+<rect x="232" y="486" width="324" height="20" fill="url(#grain)"/>
+<rect x="232" y="506" width="324" height="20" fill="rgb(196,166,150)"/>
+<rect x="232" y="506" width="324" height="20" fill="url(#grain)"/>
+<g class="fossil"><circle cx="493.00" cy="516.00" r="6.00" fill="none" stroke="#f2f4f8" stroke-width="1.6"/><circle cx="493.00" cy="516.00" r="2.00" fill="#f2f4f8"/></g>
+<rect x="232" y="526" width="324" height="20" fill="rgb(34,32,42)"/>
+<rect x="232" y="526" width="324" height="20" fill="url(#grain)"/>
+<rect x="268" y="546" width="288" height="40" fill="rgb(34,32,42)"/>
+<rect x="268" y="546" width="288" height="40" fill="url(#grain)"/>
+<path class="fault" d="M124.00 166.00 L160.00 176.00 L196.00 186.00 L232.00 176.00 L268.00 186.00 L304.00 176.00 L340.00 186.00 L376.00 176.00 L412.00 186.00 L448.00 176.00 L484.00 186.00 L520.00 176.00 L556.00 186.00" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="124.00" y="166.00" width="432.00" height="20" fill="#ff6b6b" fill-opacity="0.14"/>
+<path class="fault" d="M124.00 286.00 L160.00 296.00 L196.00 306.00 L232.00 296.00 L268.00 306.00 L304.00 296.00 L340.00 306.00 L376.00 296.00 L412.00 306.00 L448.00 296.00 L484.00 306.00 L520.00 296.00 L556.00 306.00" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="160.00" y="286.00" width="396.00" height="20" fill="#ff6b6b" fill-opacity="0.14"/>
+<path class="fault" d="M124.00 406.00 L160.00 416.00 L196.00 426.00 L232.00 416.00 L268.00 426.00 L304.00 416.00 L340.00 426.00 L376.00 416.00 L412.00 426.00 L448.00 416.00 L484.00 426.00 L520.00 416.00 L556.00 426.00" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="196.00" y="406.00" width="360.00" height="20" fill="#ff6b6b" fill-opacity="0.14"/>
+<path class="fault" d="M124.00 526.00 L160.00 536.00 L196.00 546.00 L232.00 536.00 L268.00 546.00 L304.00 536.00 L340.00 546.00 L376.00 536.00 L412.00 546.00 L448.00 536.00 L484.00 546.00 L520.00 536.00 L556.00 546.00" fill="none" stroke="#ff6b6b" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="232.00" y="526.00" width="324.00" height="20" fill="#ff6b6b" fill-opacity="0.14"/>
+<defs><pattern id="grain" width="6" height="6" patternUnits="userSpaceOnUse"><path d="M0 6L6 0" stroke="#2b3038" stroke-opacity="0.25" stroke-width="1"/></pattern></defs>
+<line x1="94.00" y1="66.00" x2="94.00" y2="86.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="76.00" x2="118.00" y2="76.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="80.00" fill="#5b6472" font-size="10">0.00 Ma</text>
+<text x="118.00" y="78.00" fill="#4a5260" font-size="9" text-anchor="end">632f9da</text>
+<text x="572.00" y="80.00" fill="#dfe3ea" font-size="11">merge feat into main</text>
+<line x1="94.00" y1="86.00" x2="94.00" y2="106.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="96.00" x2="118.00" y2="96.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="100.00" fill="#5b6472" font-size="10">0.12 Ma</text>
+<text x="118.00" y="98.00" fill="#4a5260" font-size="9" text-anchor="end">fe148bb</text>
+<text x="572.00" y="100.00" fill="#8b94a3" font-size="11">main: parallel work</text>
+<line x1="94.00" y1="106.00" x2="94.00" y2="126.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="116.00" x2="118.00" y2="116.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="120.00" fill="#5b6472" font-size="10">0.23 Ma</text>
+<text x="118.00" y="118.00" fill="#4a5260" font-size="9" text-anchor="end">a9ae370</text>
+<text x="572.00" y="120.00" fill="#8b94a3" font-size="11">feat: branch work</text>
+<line x1="94.00" y1="126.00" x2="94.00" y2="146.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="136.00" x2="118.00" y2="136.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="140.00" fill="#5b6472" font-size="10">0.35 Ma</text>
+<text x="118.00" y="138.00" fill="#4a5260" font-size="9" text-anchor="end">5053938</text>
+<text x="572.00" y="140.00" fill="#8b94a3" font-size="11">commit 41</text>
+<line x1="94.00" y1="146.00" x2="94.00" y2="166.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="156.00" x2="118.00" y2="156.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="160.00" fill="#5b6472" font-size="10">0.47 Ma</text>
+<text x="118.00" y="158.00" fill="#4a5260" font-size="9" text-anchor="end">88cb91d</text>
+<text x="572.00" y="160.00" fill="#8b94a3" font-size="11">commit 40</text>
+<line x1="94.00" y1="166.00" x2="94.00" y2="186.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="176.00" x2="118.00" y2="176.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="180.00" fill="#5b6472" font-size="10">0.58 Ma</text>
+<text x="118.00" y="178.00" fill="#4a5260" font-size="9" text-anchor="end">38464ac</text>
+<text x="572.00" y="180.00" fill="#8b94a3" font-size="11">commit 39</text>
+<line x1="94.00" y1="186.00" x2="94.00" y2="206.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="196.00" x2="118.00" y2="196.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="200.00" fill="#5b6472" font-size="10">0.70 Ma</text>
+<text x="118.00" y="198.00" fill="#4a5260" font-size="9" text-anchor="end">4b87796</text>
+<text x="572.00" y="200.00" fill="#dfe3ea" font-size="11">commit 38</text>
+<line x1="94.00" y1="206.00" x2="94.00" y2="226.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="216.00" x2="118.00" y2="216.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="220.00" fill="#5b6472" font-size="10">0.82 Ma</text>
+<text x="118.00" y="218.00" fill="#4a5260" font-size="9" text-anchor="end">6eba75e</text>
+<text x="572.00" y="220.00" fill="#8b94a3" font-size="11">commit 37</text>
+<line x1="94.00" y1="226.00" x2="94.00" y2="246.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="236.00" x2="118.00" y2="236.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="240.00" fill="#5b6472" font-size="10">0.93 Ma</text>
+<text x="118.00" y="238.00" fill="#4a5260" font-size="9" text-anchor="end">f6aa63f</text>
+<text x="572.00" y="240.00" fill="#8b94a3" font-size="11">commit 36</text>
+<line x1="94.00" y1="246.00" x2="94.00" y2="266.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="256.00" x2="118.00" y2="256.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="260.00" fill="#5b6472" font-size="10">1.05 Ma</text>
+<text x="118.00" y="258.00" fill="#4a5260" font-size="9" text-anchor="end">6e05ca9</text>
+<text x="572.00" y="260.00" fill="#8b94a3" font-size="11">commit 35</text>
+<line x1="94.00" y1="266.00" x2="94.00" y2="286.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="276.00" x2="118.00" y2="276.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="280.00" fill="#5b6472" font-size="10">1.17 Ma</text>
+<text x="118.00" y="278.00" fill="#4a5260" font-size="9" text-anchor="end">ecc7e1a</text>
+<text x="572.00" y="280.00" fill="#8b94a3" font-size="11">commit 34</text>
+<line x1="94.00" y1="286.00" x2="94.00" y2="306.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="296.00" x2="118.00" y2="296.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="300.00" fill="#5b6472" font-size="10">1.28 Ma</text>
+<text x="118.00" y="298.00" fill="#4a5260" font-size="9" text-anchor="end">07780e7</text>
+<text x="572.00" y="300.00" fill="#8b94a3" font-size="11">commit 33</text>
+<line x1="94.00" y1="306.00" x2="94.00" y2="326.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="316.00" x2="118.00" y2="316.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="320.00" fill="#5b6472" font-size="10">1.40 Ma</text>
+<text x="118.00" y="318.00" fill="#4a5260" font-size="9" text-anchor="end">c370041</text>
+<text x="572.00" y="320.00" fill="#8b94a3" font-size="11">commit 32</text>
+<line x1="94.00" y1="326.00" x2="94.00" y2="346.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="336.00" x2="118.00" y2="336.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="340.00" fill="#5b6472" font-size="10">1.52 Ma</text>
+<text x="118.00" y="338.00" fill="#4a5260" font-size="9" text-anchor="end">2450cd0</text>
+<text x="572.00" y="340.00" fill="#8b94a3" font-size="11">commit 31</text>
+<line x1="94.00" y1="346.00" x2="94.00" y2="366.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="356.00" x2="118.00" y2="356.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="360.00" fill="#5b6472" font-size="10">1.64 Ma</text>
+<text x="118.00" y="358.00" fill="#4a5260" font-size="9" text-anchor="end">6941f4e</text>
+<text x="572.00" y="360.00" fill="#8b94a3" font-size="11">commit 30</text>
+<line x1="94.00" y1="366.00" x2="94.00" y2="386.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="376.00" x2="118.00" y2="376.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="380.00" fill="#5b6472" font-size="10">1.75 Ma</text>
+<text x="118.00" y="378.00" fill="#4a5260" font-size="9" text-anchor="end">87a96aa</text>
+<text x="572.00" y="380.00" fill="#8b94a3" font-size="11">commit 29</text>
+<line x1="94.00" y1="386.00" x2="94.00" y2="406.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="396.00" x2="118.00" y2="396.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="400.00" fill="#5b6472" font-size="10">1.87 Ma</text>
+<text x="118.00" y="398.00" fill="#4a5260" font-size="9" text-anchor="end">6a9ee4d</text>
+<text x="572.00" y="400.00" fill="#dfe3ea" font-size="11">commit 28</text>
+<line x1="94.00" y1="406.00" x2="94.00" y2="446.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="426.00" x2="118.00" y2="426.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="430.00" fill="#5b6472" font-size="10">2.10 Ma</text>
+<text x="118.00" y="418.00" fill="#4a5260" font-size="9" text-anchor="end">8072a82</text>
+<text x="572.00" y="430.00" fill="#8b94a3" font-size="11">commit 27</text>
+<line x1="94.00" y1="446.00" x2="94.00" y2="466.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="456.00" x2="118.00" y2="456.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="460.00" fill="#5b6472" font-size="10">2.22 Ma</text>
+<text x="118.00" y="458.00" fill="#4a5260" font-size="9" text-anchor="end">92c1bdc</text>
+<text x="572.00" y="460.00" fill="#8b94a3" font-size="11">commit 26</text>
+<line x1="94.00" y1="466.00" x2="94.00" y2="486.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="476.00" x2="118.00" y2="476.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="480.00" fill="#5b6472" font-size="10">2.34 Ma</text>
+<text x="118.00" y="478.00" fill="#4a5260" font-size="9" text-anchor="end">8926041</text>
+<text x="572.00" y="480.00" fill="#8b94a3" font-size="11">commit 25</text>
+<line x1="94.00" y1="486.00" x2="94.00" y2="506.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="496.00" x2="118.00" y2="496.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="500.00" fill="#5b6472" font-size="10">2.45 Ma</text>
+<text x="118.00" y="498.00" fill="#4a5260" font-size="9" text-anchor="end">4909577</text>
+<text x="572.00" y="500.00" fill="#8b94a3" font-size="11">commit 24</text>
+<line x1="94.00" y1="506.00" x2="94.00" y2="526.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="516.00" x2="118.00" y2="516.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="520.00" fill="#5b6472" font-size="10">2.57 Ma</text>
+<text x="118.00" y="518.00" fill="#4a5260" font-size="9" text-anchor="end">1076b83</text>
+<text x="572.00" y="520.00" fill="#dfe3ea" font-size="11">commit 23</text>
+<line x1="94.00" y1="526.00" x2="94.00" y2="586.00" stroke="#2b3038" stroke-width="1"/>
+<line x1="90.00" y1="556.00" x2="118.00" y2="556.00" stroke="#2b3038" stroke-width="1"/>
+<text x="20" y="560.00" fill="#5b6472" font-size="10">2.92 Ma</text>
+<text x="118.00" y="538.00" fill="#4a5260" font-size="9" text-anchor="end">8481ce8</text>
+<text x="572.00" y="560.00" fill="#8b94a3" font-size="11">commit 0</text>
+<text x="20" y="604.00" fill="#5b6472" font-size="10">0.00 Ma top · 2.92 Ma base · 26 rows</text>
+</svg>
