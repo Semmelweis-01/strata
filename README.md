@@ -10,7 +10,7 @@ Read a file's git history as a geological core sample — faults, fossils, dikes
 
 <a href="#install"><img alt="install" src="https://img.shields.io/badge/npx-strata-2b2b2b?style=flat-square"></a>
 <img alt="deps" src="https://img.shields.io/badge/dependencies-0-2b2b2b?style=flat-square">
-<img alt="tests" src="https://img.shields.io/badge/tests-66%20passing-2b2b2b?style=flat-square">
+<img alt="tests" src="https://img.shields.io/badge/tests-67%20passing-2b2b2b?style=flat-square">
 <img alt="node" src="https://img.shields.io/badge/node-%E2%89%A518-2b2b2b?style=flat-square">
 
 <img src="assets/core.svg" width="760" alt="a core sample rendered from a file's git history">
@@ -337,7 +337,7 @@ git history  ──▶  Core  ──▶  terminal string / SVG
                   (plain JSON)
 ```
 
-That is the entire architecture, and it is why the project has 66 tests and zero
+That is the entire architecture, and it is why the project has 67 tests and zero
 dependencies: the interesting part is a pure function you can call directly.
 
 ```js

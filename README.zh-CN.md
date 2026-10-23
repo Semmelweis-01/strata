@@ -10,7 +10,7 @@
 
 <a href="#安装"><img alt="install" src="https://img.shields.io/badge/npx-strata-2b2b2b?style=flat-square"></a>
 <img alt="deps" src="https://img.shields.io/badge/依赖-0-2b2b2b?style=flat-square">
-<img alt="tests" src="https://img.shields.io/badge/测试-66%20通过-2b2b2b?style=flat-square">
+<img alt="tests" src="https://img.shields.io/badge/测试-67%20通过-2b2b2b?style=flat-square">
 <img alt="node" src="https://img.shields.io/badge/node-%E2%89%A518-2b2b2b?style=flat-square">
 
 <img src="assets/core.svg" width="760" alt="从 git 历史渲染出的岩芯">
@@ -334,7 +334,7 @@ git 历史  ──▶  Core  ──▶  终端字符串 / SVG
                 (纯 JSON)
 ```
 
-这就是全部架构，也是这个项目有 66 个测试、零依赖的原因：
+这就是全部架构，也是这个项目有 67 个测试、零依赖的原因：
 有意思的那部分是一个可以直接调用的纯函数。
 
 ```js
