@@ -210,3 +210,21 @@ test('core identity and rocks are path-form independent', () => {
   assert.equal(new Set(empties.map((core) => core.seed)).size, 1);
   assert.equal(new Set(empties.map((core) => core.id)).size, 1);
 });
+
+test('core identity does not depend on render options', () => {
+  const commits = raw(30, (i) => ({ added: 1 + (i % 7), deleted: i % 3, isMerge: i % 5 === 0 }));
+  const views = [4, 8, 16, 40, 200].map((maxRows) => buildCore('view.mjs', commits, { maxRows }));
+
+  // the layers legitimately differ: fewer rows merge neighbouring commits
+  assert.notDeepEqual(
+    views[0].layers.map((layer) => layer.sha),
+    views[4].layers.map((layer) => layer.sha),
+  );
+
+  // but the identity of the file must not
+  for (const view of views) {
+    assert.equal(view.id, views[0].id, 'id changed with maxRows');
+    assert.equal(view.seed, views[0].seed, 'seed changed with maxRows');
+  }
+  assert.equal(new Set(views.map((view) => view.id)).size, 1);
+});

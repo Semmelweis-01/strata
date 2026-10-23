@@ -164,7 +164,9 @@ export function buildCore(filePath, rawCommits, opts) {
   });
 
   const totalRows = finalLayers.reduce((sum, layer) => sum + layer.rows, 0);
-  const seed = hash32(`${normPath}${finalLayers[0].sha}`);
+  // identity must not depend on render options: use the file's very first commit
+  const firstSha = String(records[0].sha || '').slice(0, 7);
+  const seed = hash32(`${normPath}${firstSha}`);
   const id = (`${seed.toString(16).toUpperCase()}` + '00000000').slice(0, 8);
 
   return {

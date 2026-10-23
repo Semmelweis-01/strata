@@ -746,3 +746,25 @@ test('a young core with tied timestamps still states a span, a lone layer does n
   assert.equal(renderSvg(lone).includes('span'), false, 'svg: one layer has no span');
 });
 
+
+test('labels and gutter are independent switches', () => {
+  const core = makeYoungCore([1, 2, 3, 4], flatDepth);
+
+  const both = footerOf(core, { color: 'none' });
+  assert.equal(both.includes('Ma'), true, 'default shows the depth gutter');
+
+  // labels:false keeps the depth column but drops the commit-subject column
+  const noLabels = renderAnsi(core, { color: 'none', labels: false });
+  assert.equal(noLabels.includes('Ma'), true, 'labels:false keeps depth');
+  assert.equal(noLabels.includes('commit'), false, 'labels:false drops subjects');
+
+  // gutter:false drops the depth column
+  const noGutter = renderAnsi(core, { color: 'none', gutter: false });
+  assert.equal(noGutter.includes('Ma'), false, 'gutter:false drops depth');
+
+  // both off leaves nothing but the core body and its footer
+  const bare = renderAnsi(core, { color: 'none', labels: false, gutter: false });
+  assert.equal(bare.includes('Ma'), false, 'bare core has no depth');
+  assert.equal(bare.includes('commit'), false, 'bare core has no subjects');
+  assert.ok(bare.split('\n').length >= 2, 'bare core still renders rows');
+});

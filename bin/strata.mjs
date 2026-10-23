@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { writeFileSync, mkdirSync, existsSync } from 'node:fs';
 import { resolve, basename, dirname, relative, isAbsolute } from 'node:path';
 import { readHistory, isGitRepo } from '../src/gitlog.mjs';
 import { buildCore, emptyCore } from '../src/model.mjs';
@@ -20,19 +20,19 @@ const HELP = [
   '  --ascii         ASCII-only glyphs',
   '  --color <m>     truecolor | 256 | none',
   '  --theme <t>     dark | light (svg only)',
-  '  --no-labels     hide depth and subject gutters',
+  '  --no-labels     hide the depth and subject gutters',
   '  -h, --help      show this help',
 ].join("\n");
 
 function parseArgs(argv) {
-  const opts = { width: 24, maxRows: 40, ascii: false, color: null, theme: 'dark', labels: true, svg: null, json: false };
+  const opts = { width: 24, maxRows: 40, ascii: false, color: null, theme: 'dark', labels: true, gutter: true, svg: null, json: false };
   const rest = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '-h' || a === '--help') { opts.help = true; continue; }
     if (a === '--ascii') { opts.ascii = true; continue; }
     if (a === '--json') { opts.json = true; continue; }
-    if (a === '--no-labels') { opts.labels = false; continue; }
+    if (a === '--no-labels') { opts.labels = false; opts.gutter = false; continue; }
     if (a === '--width') { opts.width = Number(argv[++i]); continue; }
     if (a === '--max-rows') { opts.maxRows = Number(argv[++i]); continue; }
     if (a === '--color') { opts.color = argv[++i]; continue; }
@@ -71,10 +71,11 @@ function detectAscii(explicit) {
 
 async function main() {
   const { opts, target } = parseArgs(process.argv.slice(2));
-  if (opts.help || !target) { console.log(HELP); process.exit(target ? 0 : 1); }
+  if (opts.help) { console.log(HELP); return; }
+  if (!target) { console.log(HELP); process.exitCode = 1; return; }
   const color = detectColor(opts.color);
   const ascii = detectAscii(opts.ascii);
-  const common = { width: opts.width, maxRows: opts.maxRows, labels: opts.labels, ascii, color };
+  const common = { width: opts.width, maxRows: opts.maxRows, labels: opts.labels, gutter: opts.gutter, ascii, color };
   const cwd = process.cwd();
   const shown = (isAbsolute(target) ? relative(cwd, target) || basename(target) : target).replace(/\\/g, '/').replace(/^(\.\/)+/, '');
   if (!isGitRepo(cwd)) {
@@ -86,6 +87,7 @@ async function main() {
     process.exitCode = 2;
     return;
   }
+  if (!existsSync(resolve(target))) throw new Error('no such file: ' + target);
   const raw = await readHistory(shown, { cwd });
   const core = raw.length ? buildCore(shown, raw, { maxRows: opts.maxRows }) : emptyCore(shown);
   if (opts.json) { console.log(JSON.stringify(core, null, 2)); return; }
