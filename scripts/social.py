@@ -12,10 +12,11 @@ ROCK_RGB = {
 }
 
 env = {**os.environ, "WT_SESSION": "probe"}
-os.chdir(r"C:\Users\yukino\Documents\deepseek-harness\default-workspace\demo-repo")
-out = subprocess.run(["node", r"C:\Users\yukino\Documents\deepseek-harness\default-workspace\strata\bin\strata.mjs", "--json", "--max-rows", "28", "engine.js"],
+os.chdir(r"C:\\Users\\yukino\\Documents\\deepseek-harness\\default-workspace\\demo-repo")
+out = subprocess.run(["node", r"C:\\Users\\yukino\\Documents\\deepseek-harness\\default-workspace\\strata\\bin\\strata.mjs", "--json", "--max-rows", "28", "engine.js"],
                      capture_output=True, text=True, encoding="utf-8", env=env)
 core = json.loads(out.stdout)
+layers = list(reversed(core["layers"]))   # newest at the top, like the terminal renderer
 
 img = Image.new("RGB", (W, H), BG)
 d = ImageDraw.Draw(img)
@@ -28,48 +29,41 @@ d.text((58, 100), "Read a file's git history as a geological core sample.", font
 d.text((58, 128), "zero dependencies  /  deterministic  /  npx strata", font=mono, fill=ACCENT)
 
 TOP, BOTTOM = 178, H - 56
-CH, CW, COLS = 15, 16, 20
-MAXSHIFT = 6                     # keep the core away from the label column
+COLS, CW = 20, 16
+CH = (BOTTOM - TOP) // max(1, len(layers))
+MAXSHIFT = 6
 LEFT_M   = 96
 X0       = LEFT_M + 12
-CORE_R   = X0 + COLS * CW
-LABEL_X  = X0 + (COLS + MAXSHIFT) * CW + 34   # right of the WIDEST possible core
-
-rows = []
-for layer in core["layers"]:
-    for r in range(layer["rows"]):
-        rows.append((layer, r == 0))
-rows.reverse()
-rows = rows[: (BOTTOM - TOP) // CH]
+LABEL_X  = X0 + (COLS + MAXSHIFT) * CW + 34
 
 offset = 0
-for i, (layer, is_first) in enumerate(rows):
-    y    = TOP + i * CH
+for i, layer in enumerate(layers):
+    y   = TOP + i * CH
     xoff = X0 + offset * CW
-    rgb  = ROCK_RGB.get(layer["rock"], (128,128,128))
+    rgb = ROCK_RGB.get(layer["rock"], (128,128,128))
 
     for c in range(COLS):
         cx = xoff + c * CW
-        d.rectangle([cx, y, cx + CW - 1, y + CH - 1], fill=rgb)
+        d.rectangle([cx, y + 1, cx + CW - 1, y + CH - 2], fill=rgb)
 
     if layer.get("fossil"):
         fx = xoff + (COLS // 2) * CW
-        d.ellipse([fx + 3, y + 3, fx + CW - 4, y + CH - 4], fill=(255,255,255))
+        cy = y + CH // 2
+        d.ellipse([fx + 3, cy - 4, fx + CW - 4, cy + 4], fill=(255,255,255))
     if layer.get("dike"):
         dx = xoff + (COLS // 2 + 3) * CW
-        d.line([dx, y, dx, y + CH], fill=(255,140,90), width=2)
-    if layer["fault"] and is_first:
+        d.line([dx, y + 1, dx, y + CH - 2], fill=(255,140,90), width=2)
+    if layer.get("fault"):
         d.text((LEFT_M - 10, y), "/", font=mono, fill=FAULTC)
-
-    if is_first:
-        d.text((LEFT_M - 58, y), "%5.2f" % layer["depthMa"], font=mono, fill=(120,128,142))
-        d.text((LABEL_X, y), layer["subject"][:28], font=mono, fill=DIM)
-
-    if layer["fault"] and is_first:
         offset = min(MAXSHIFT, offset + 2)
+
+    d.text((LEFT_M - 58, y + CH // 2 - 8), "%5.2f" % layer["depthMa"], font=mono, fill=(120,128,142))
+    d.text((LABEL_X, y + CH // 2 - 8), layer["subject"][:30], font=mono, fill=DIM)
 
 SIG = "github.com/Semmelweis-01/strata"
 sig_w = d.textlength(SIG, font=mono)
 d.text((W - 56 - sig_w, H - 38), SIG, font=mono, fill=DIM)
-img.save(r"C:\Users\yukino\Documents\deepseek-harness\default-workspace\strata\assets\social-preview.png", optimize=True)
-print("rows", len(rows), "bytes", os.path.getsize(r"C:\Users\yukino\Documents\deepseek-harness\default-workspace\strata\assets\social-preview.png"))
+
+OUT = r"C:\\Users\\yukino\\Documents\\deepseek-harness\\default-workspace\\strata\\assets\\social-preview.png"
+img.save(OUT, optimize=True)
+print("layers", len(layers), "| rows", core["totalRows"], "| bytes", os.path.getsize(OUT))
